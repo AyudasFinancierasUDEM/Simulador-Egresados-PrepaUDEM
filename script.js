@@ -131,7 +131,7 @@ export function calculateProfessionalTuition() {
     showMessage(
         `
         <p><strong>Colegiatura profesional Ot25:</strong> $${formattedTuition}</p>
-        <p><strong>Pago adicional en Profesional:</strong> $${formattedDifference}</p>
+        <p><strong>Pago adicional en Profesional:</strong> <span id="additional-payment" class="${difference < 0 ? 'negative' : ''}">$${formattedDifference}</span></p>
         `,
         "Información profesional (Estimada)"
     );
