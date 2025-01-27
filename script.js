@@ -94,13 +94,13 @@ function calculateProfessionalTuition() {
     let costPerCredit;
     switch (selectedProgram) {
         case "MCP":
-            costPerCredit = 4920;
+            costPerCredit = 5115;
             break;
         case "Arte y Diseño":
-            costPerCredit = 4597.5;
+            costPerCredit = 4688;
             break;
         case "General":
-            costPerCredit = 4480;
+            costPerCredit = 4570;
             break;
         default:
             costPerCredit = 0;
@@ -131,7 +131,7 @@ function calculateProfessionalTuition() {
         <p><strong>Colegiatura profesional Ot25:</strong> $${formattedTuition}</p>
         <p><strong>Pago adicional en Profesional:</strong> $${formattedDifference}</p>
         `,
-        "Simulación de Profesional"
+        "Información profesional (Estimada)"
     );
 }
 
