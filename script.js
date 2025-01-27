@@ -1,8 +1,10 @@
+import CONFIG from './config.js';
+
 let studentInfo = {}; 
 
 // Función para cargar datos de Google Sheets
-function fetchSheetData() {
-    const SHEET_API_URL = "https://sheets.googleapis.com/v4/spreadsheets/1ggSQM2O96l2ljxubwdBdHxYuHaKpQTAEktVNyiJMtW4/values/BD!A:J?key=AIzaSyAZ5zOnneojWmE5cPKquaG3DpjyZgS-Pv4";
+export function fetchSheetData() {
+    const SHEET_API_URL = `https://sheets.googleapis.com/v4/spreadsheets/1ggSQM2O96l2ljxubwdBdHxYuHaKpQTAEktVNyiJMtW4/values/BD!A:J?key=${CONFIG.API_KEY}`;
     const studentId = document.getElementById("student-id").value.trim();
 
     if (!studentId) {
@@ -85,7 +87,7 @@ function displayStudentInfo(student) {
 }
 
 // Función para calcular colegiatura
-function calculateProfessionalTuition() {
+export function calculateProfessionalTuition() {
     const scholarship = parseFloat(document.getElementById("professional-scholarship").value);
     const credits = parseInt(document.getElementById("credits").value);
     const selectedProgram = document.getElementById("program").value;
@@ -143,10 +145,16 @@ function showMessage(content, title = "Mensaje") {
         <div class="message-box">
             <h3>${title}</h3>
             <div class="message-content">${content}</div>
-            <button class="btn-close" onclick="closeMessage()">Cerrar</button>
+            <button class="btn-close">Cerrar</button>
         </div>
     `;
+
+    // Agregar el contenedor al DOM
     document.body.appendChild(messageContainer);
+
+    // Vincular evento al botón cerrar
+    const closeButton = messageContainer.querySelector(".btn-close");
+    closeButton.addEventListener("click", closeMessage);
 }
 
 // Función para cerrar el mensaje dinámico

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulador Egresados de Prepa UDEM</title>
+    <title>Simulador Egresados Prepa UDEM</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Simulador Egresados de Prepa UDEM</h1>
+            <h1>Simulador Egresados Prepa UDEM</h1>
         </header>
 
         <div class="input-section">
@@ -48,11 +48,18 @@
         </div>
 
         <div id="results-container"></div>
-
     </div>
 
-    <script src="script.js"></script>
+    <!-- Importa el archivo script.js como módulo -->
+    <script type="module">
+        import { fetchSheetData, calculateProfessionalTuition } from './script.js';
+
+        // Asigna las funciones al ámbito global para que sean accesibles en el HTML
+        window.fetchSheetData = fetchSheetData;
+        window.calculateProfessionalTuition = calculateProfessionalTuition;
+    </script>
 </body>
 </html>
+
 
 
