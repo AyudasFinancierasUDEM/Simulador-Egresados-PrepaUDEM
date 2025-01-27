@@ -1,4 +1,4 @@
-let studentInfo = {};
+let studentInfo = {}; 
 
 // Función para cargar datos de Google Sheets
 function fetchSheetData() {
@@ -88,9 +88,26 @@ function displayStudentInfo(student) {
 function calculateProfessionalTuition() {
     const scholarship = parseFloat(document.getElementById("professional-scholarship").value);
     const credits = parseInt(document.getElementById("credits").value);
-    const costPerCredit = 4500;
+    const selectedProgram = document.getElementById("program").value;
 
-    if (isNaN(scholarship) || isNaN(credits)) {
+    // Definir costos por crédito según el programa
+    let costPerCredit;
+    switch (selectedProgram) {
+        case "MCP":
+            costPerCredit = 4920;
+            break;
+        case "Arte y Diseño":
+            costPerCredit = 4597.5;
+            break;
+        case "General":
+            costPerCredit = 4480;
+            break;
+        default:
+            costPerCredit = 0;
+            break;
+    }
+
+    if (isNaN(scholarship) || isNaN(credits) || costPerCredit === 0) {
         alert("Por favor, ingresa valores válidos.");
         return;
     }
@@ -114,7 +131,7 @@ function calculateProfessionalTuition() {
         <p><strong>Colegiatura profesional Ot25:</strong> $${formattedTuition}</p>
         <p><strong>Pago adicional en Profesional:</strong> $${formattedDifference}</p>
         `,
-        "Resultado de Cálculo"
+        "Simulación de Profesional"
     );
 }
 
