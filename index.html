@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Becas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Simulador de Becas</h1>
+        </header>
+
+        <div class="input-section">
+            <input type="text" id="student-id" placeholder="Ingresa el ID del estudiante">
+            <button onclick="fetchSheetData()">Cargar datos</button>
+        </div>
+
+        <!-- Título de la tabla -->
+        <div id="table-title">
+            <h2>Información del Estudiante de Prepa UDEM</h2>
+        </div>
+
+        <!-- Contenedor de datos -->
+        <div id="data-container"></div>
+
+        <!-- Sección para calcular colegiatura profesional -->
+        <div id="calculation-section" style="display:none;">
+            <h3>Calcular Colegiatura Profesional</h3>
+            <label for="professional-scholarship">% de beca en Profesional:</label>
+            <input type="number" id="professional-scholarship" placeholder="Beca (%)" required>
+
+            <label for="credits">Créditos a Inscribir:</label>
+            <input type="number" id="credits" placeholder="Número de créditos" required>
+
+            <button onclick="calculateProfessionalTuition()">Calcular Colegiatura Profesional</button>
+        </div>
+
+        <div id="results-container"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
