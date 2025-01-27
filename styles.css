@@ -144,3 +144,23 @@ table th {
     background-color: #1f1f1f; /* Gris más oscuro */
 }
 
+/* Estilo común para ambos botones */
+.main-button {
+    background-color: #1f1f1f; /* El mismo color verde */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado */
+    text-align: center; /* Centrado del texto */
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Bloques en línea */
+    font-size: 16px; /* Tamaño de texto */
+    margin: 10px 0; /* Márgenes */
+    cursor: pointer; /* Puntero al pasar el mouse */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Efecto cuando pasas el mouse sobre los botones */
+.main-button:hover {
+    background-color: #1f1f1f; /* Color al pasar el mouse */
+}
+
