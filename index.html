@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulador Egresados Prepa UDEM</title>
 
-    <!-- Vincula el archivo CSS aquí -->
+    <!-- Vincula el archivo CSS -->
     <link rel="stylesheet" href="styles.css">
 
     <style>
@@ -54,34 +54,32 @@
 </head>
 <body>
     <div class="container">
-        <header>
+        <header style="text-align: center;">
+            <!-- Logo integrado -->
+            <img src="logo.png" alt="Logo AF BOT" style="height: 100px; margin-bottom: 10px;">
             <h1>Simulador Egresados Prepa UDEM</h1>
         </header>
 
         <div class="input-section">
             <input type="text" id="student-id" placeholder="Ingresa el ID del estudiante">
-            <!-- Botón con la clase de estilo -->
             <button class="main-button" onclick="fetchSheetData()">Información Prepa UDEM</button>
         </div>
 
-        <!-- Título de la tabla -->
         <div id="table-title">
             <h2>Información del Estudiante de Prepa UDEM</h2>
         </div>
 
-        <!-- Contenedor de datos -->
         <div id="data-container"></div>
 
-        <!-- Sección para calcular colegiatura profesional -->
         <div id="calculation-section" style="display:none;">
             <h3>Calcular Colegiatura Profesional</h3>
+
             <label for="professional-scholarship">% de beca en Profesional:</label>
             <input type="number" id="professional-scholarship" placeholder="Beca (%)" required>
 
             <label for="credits">Créditos a Inscribir:</label>
             <input type="number" id="credits" placeholder="Número de créditos" required>
 
-            <!-- Selección de Programa -->
             <label for="program">Selecciona el Programa:</label>
             <select id="program" required>
                 <option value="MCP">MCP - $5,040 por crédito</option>
@@ -89,18 +87,16 @@
                 <option value="General">General - $4,590 por crédito</option>
             </select>
 
-            <!-- Botón para calcular -->
             <button class="main-button" onclick="calculateProfessionalTuition()">Calcular colegiatura profesional</button>
         </div>
 
         <div id="results-container"></div>
     </div>
 
-    <!-- Importa el archivo script.js como módulo -->
+    <!-- Importa script.js como módulo -->
     <script type="module">
         import { fetchSheetData, calculateProfessionalTuition } from './script.js';
 
-        // Asigna las funciones al ámbito global para que sean accesibles en el HTML
         window.fetchSheetData = fetchSheetData;
         window.calculateProfessionalTuition = calculateProfessionalTuition;
     </script>
