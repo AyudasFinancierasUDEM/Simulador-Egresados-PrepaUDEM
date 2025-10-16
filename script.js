@@ -67,7 +67,7 @@ function displayStudentInfo(student) {
                     <th>Prepa</th>
                     <th>Programa</th>
                     <th>Escuela de procedencia</th>
-                    <th>Colegiatura Pr25</th>
+                    <th>Colegiatura Pr26</th>
                 </tr>
             </thead>
             <tbody>
