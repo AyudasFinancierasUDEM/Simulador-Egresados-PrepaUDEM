@@ -41,7 +41,7 @@ export function fetchSheetData() {
                     prepa: student.Prepa || "N/A",
                     programa: student.Programa || "N/A",
                     escuela: student["Escuela de procedencia"] || "N/A",
-                    colegiaturaPr25: student["Colegiatura Pr26 (con beca descontada)"] || "N/A"
+                    colegiaturaPr25: student["Colegiatura Pr25 (con beca descontada)"] || "N/A"
                 };
 
                 displayStudentInfo(studentInfo);
