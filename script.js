@@ -96,13 +96,13 @@ export function calculateProfessionalTuition() {
     let costPerCredit;
     switch (selectedProgram) {
         case "MCP":
-            costPerCredit = 5320;
+            costPerCredit = 5420;
             break;
         case "Arte y Diseño":
-            costPerCredit = 4898;
+            costPerCredit = 4950;
             break;
         case "General":
-            costPerCredit = 4774;
+            costPerCredit = 4822;
             break;
         default:
             costPerCredit = 0;
