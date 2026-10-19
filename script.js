@@ -67,7 +67,7 @@ function displayStudentInfo(student) {
                     <th>Prepa</th>
                     <th>Programa</th>
                     <th>Escuela de procedencia</th>
-                    <th>Colegiatura Pr26</th>
+                    <th>Colegiatura OT26</th>
                 </tr>
             </thead>
             <tbody>
@@ -96,13 +96,13 @@ export function calculateProfessionalTuition() {
     let costPerCredit;
     switch (selectedProgram) {
         case "MCP":
-            costPerCredit = 5535;
+            costPerCredit = 5545;
             break;
         case "Arte y Diseño":
-            costPerCredit = 5050;
+            costPerCredit = 5060;
             break;
         case "General":
-            costPerCredit = 4915;
+            costPerCredit = 4925;
             break;
         default:
             costPerCredit = 0;
@@ -130,7 +130,7 @@ export function calculateProfessionalTuition() {
     // Mostrar mensaje dinámico en la aplicación
     showMessage(
         `
-        <p><strong>Colegiatura profesional Ot26:</strong> $${formattedTuition}</p>
+        <p><strong>Colegiatura profesional Ot27:</strong> $${formattedTuition}</p>
         <p><strong>Pago adicional en Profesional:</strong> <span id="additional-payment" class="${difference < 0 ? 'negative' : ''}">$${formattedDifference}</span></p>
         `,
         "Información profesional (Estimada)"
